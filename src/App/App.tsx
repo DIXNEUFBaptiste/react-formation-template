@@ -1,16 +1,18 @@
-import React from "react";
+import React,{ useState} from "react";
 import "./App.css";
 import Button from "./components/Button/Button";
 
 function App() {
-  return (
+  const [state, setstate] = useState(0)
+  return (  
     <div className="App">
-      Hello world
+      Hello world {state}
       <Button
         text="text du button"
         bgcolor="red"
         eventClicked={(arg: any) => {
-          console.log(arg);
+          setstate(state+1);
+          console.log(state+1);
         }}
       >
         Hello
@@ -26,7 +28,7 @@ function App() {
       </Button>
       <Button style={{border : '1px solid'}} text="text du button 4">
       </Button>
-
+      
     </div>
   );
 }

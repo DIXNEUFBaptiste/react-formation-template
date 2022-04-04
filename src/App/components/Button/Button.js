@@ -1,21 +1,29 @@
-import React from "react";
+import React,{ useState} from "react";
 import style from "./Button.module.css";
 import PropTypes from "prop-types";
 
 function Button(props) {
   console.log(props);
   //const textAdded = props.text+'Hello'
+  const [clicked, setclicked] = useState(false)
   return (
     <button
       onClick={(evt) => {
+          setclicked(true);
+          setTimeout( ()=>{
+            setclicked(false)
+          }, 1000)
         props.eventClicked("Hello");
       }}
-      className={style.Button}
+      className={style.Button }
       style={{...props.style, backgroundColor: props.bgcolor, color: props.color }}
       type={props.type}
+      clicked
     >
       {props.text}
       {props.children}
+      {clicked ? 'oui' :  'non'}
+
     </button>
   );
 }
