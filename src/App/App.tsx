@@ -23,8 +23,10 @@ function App() {
         <div>Image</div>
       </Button>
       <Button bgcolor="blue" color="green" text="text du button 4">
-        {" "}
       </Button>
+      <Button style={{border : '1px solid'}} text="text du button 4">
+      </Button>
+
     </div>
   );
 }

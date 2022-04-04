@@ -11,7 +11,7 @@ function Button(props) {
         props.eventClicked("Hello");
       }}
       className={style.Button}
-      style={{ backgroundColor: props.bgcolor, color: props.color }}
+      style={{...props.style, backgroundColor: props.bgcolor, color: props.color }}
       type={props.type}
     >
       {props.text}
@@ -27,6 +27,7 @@ Button.propTypes = {
   color: PropTypes.string.isRequired,
   children: PropTypes.any.isRequired,
   type: PropTypes.string.isRequired,
+  style:  PropTypes.object
 };
 
 Button.defaultProps = {
