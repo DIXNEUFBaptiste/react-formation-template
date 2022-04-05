@@ -1,0 +1,25 @@
+{
+    "memes":[
+        {
+            "id" : 0,
+            "text":"Demat breizh",
+            "x":50,
+            "y":100,
+            "fontweight":"900",
+            "fontSize":30,
+            "underline": true,
+            "italic":false,
+            "imageId":0,
+            "color":"#ACEBA0"
+        }
+    ],
+    "images" :[
+        {
+            "id":0,
+            "url":"futurama.jpg",
+            "w":1200,
+            "h":675,
+            "name":"futurama.jpg"
+        }
+    ]
+}
