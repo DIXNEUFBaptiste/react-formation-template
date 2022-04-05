@@ -1,7 +1,6 @@
 import {combineReducers, createStore} from 'redux'
 import { REST_SRV_BASE_URL } from '../config/config';
 import { DummyMeme } from '../interfaces/common';
-
 const initialRessourcesState={
     images:[],
     memes:[],
@@ -11,9 +10,6 @@ export const RessourcesActions=Object.freeze({
     ADD_INIT_MEMES:'ADD_INIT_MEMES',
     ADD_MEME:'ADD_MEME'
 });
-
-
-
 function ressourcesReducer(state=initialRessourcesState,action){
     switch(action.type){
         //actions disponible pour les composants
@@ -41,28 +37,20 @@ function modalReducer(state={isShown:false,content:''},action){
         default:return state;
     }
 }
-
-
-export const currentActions=Object.freeze({
-    SAVE_CURRENT:'SAVE_CURRENT',
-    RESET_CURRENT:'RESET_CURRENT',
-});
-
-function currentReducer(state=DummyMeme,action){
+export const CURRENT_ACTIONS=Object.freeze({
+    UPDATE_CURRENT:'UPDATE_CURRENT',
+    RESET_CURRENT:'RESET_CURRENT'
+}) 
+function currentReducer(state=DummyMeme,action) {
     switch(action.type){
-        case currentActions.SAVE_CURRENT:return {...DummyMeme};
-        case currentActions.RESET_CURRENT:return {...state, ...action.value};
-        default:return state;
+        case CURRENT_ACTIONS.RESET_CURRENT:return {...DummyMeme};
+        case CURRENT_ACTIONS.UPDATE_CURRENT:return {...state,...action.value}
+        default : return state;
     }
 }
-
 //export const storeModal=createStore(modalReducer);
-const combinedReducers=combineReducers({
-    modal:modalReducer,
-    ressources: ressourcesReducer,
-    current: currentReducer
-});
-export const store=createStore(combinedReducers);
+const combinedReducers=combineReducers({modal:modalReducer,ressources: ressourcesReducer,current:currentReducer});
+export const store=createStore(combinedReducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 store.subscribe(()=>{
     console.log(store.getState())
 });

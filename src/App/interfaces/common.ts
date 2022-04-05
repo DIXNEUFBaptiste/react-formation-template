@@ -1,30 +1,28 @@
 export interface I_Meme{
     id?:number
-    title:string
+    titre:string
     text:string
     x:number
     y:number
-    fontweight:string
+    fontWeight:string
     fontSize:number
     underline:boolean
     italic:boolean
-    imageId:number|null
-    color: string
+    imageId:number
+    color:string
 };
-
 export const DummyMeme:I_Meme={
+    titre:'meme1',
     text:"Demat breizh",
-    title:"titre",
     x:50,
     y:100,
-    fontweight:'900',
+    fontWeight:'900',
     fontSize:30,
-    underline: true,
+    underline:true,
     italic:false,
     imageId:0,
     color:'#ACEBA0'
 };
-
 export interface I_Image{
     id:number
     url:string
