@@ -19,7 +19,7 @@ const MemeForm: FC<I_MemeFormProps> = (props) => {
         <hr />
         <h2>Image</h2>
         <select>
-          <option value="-1">Aucune</option>
+          {props.images.map((element, index) => <option key={'option-image-' + index} value={element.id}>{element.url}</option>)}          
         </select>
         <hr />
         <h2>text</h2>
@@ -49,7 +49,7 @@ const MemeForm: FC<I_MemeFormProps> = (props) => {
         <input type="color" id="f_color"  
             value={props.currentMeme.color} 
             onChange={evt=>{props.onInputValueChange({color:evt.target.value})}} />
-       
+
        
        
         <div className={styles.half}>
