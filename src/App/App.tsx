@@ -4,7 +4,8 @@ import FlexWLayout from "./components/layouts/FlexWLayout/FlexWLayout";
 import MemeForm from "./components/MemeForm/MemeForm";
 import MemeViewer from "./components/MemeViewer/MemeViewer";
 import { DummyMeme as initialMemeState, I_Meme, I_Image } from "./interfaces/common";
-import { REST_SRV_BASE_URL } from "./config/config";
+import { store } from "./store/store";
+
 
 interface I_AppProps {
   AppName?: string;
@@ -23,13 +24,7 @@ class App extends Component<I_AppProps, I_AppState> {
     this.state = { 
       currentMeme:initialMemeState,
       memes:[],
-      images:[{
-        id:0,
-        url:'futurama.jpg',
-        w:1200,
-        h:675,
-        name:'futurama'
-      }]
+      images:[]
     };
   }
   componentDidMount() {
@@ -38,11 +33,10 @@ class App extends Component<I_AppProps, I_AppState> {
     //   "font-size:24pt;color:green;font-weight:900",
     //   "Le component App est monté"
     // );
-    const prm = fetch(`${REST_SRV_BASE_URL}/memes`).then((f) => f.json());
-    const pri = fetch(`${REST_SRV_BASE_URL}/images`).then((f) => f.json());
-    Promise.all([prm, pri]).then((aResp) => {
-      this.setState({ images: aResp[1], memes: aResp[0] });
-    });
+    this.setState({memes:store.getState().ressources.memes, images: store.getState().ressources.images})
+    store.subscribe( ()=> {
+      this.setState({memes:store.getState().ressources.memes, images: store.getState().ressources.images})
+    })
   }
   componentDidUpdate(oldProps:I_AppProps,oldState:I_AppState){
     console.log(
