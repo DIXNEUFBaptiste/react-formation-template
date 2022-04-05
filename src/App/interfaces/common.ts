@@ -1,5 +1,6 @@
 export interface I_Meme{
     id?:number
+    title:string
     text:string
     x:number
     y:number
@@ -13,6 +14,7 @@ export interface I_Meme{
 
 export const DummyMeme:I_Meme={
     text:"Demat breizh",
+    title:"titre",
     x:50,
     y:100,
     fontweight:'900',

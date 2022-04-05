@@ -39,7 +39,7 @@ function Button(props) {
 }
 
 Button.propTypes = {
-  text: PropTypes.string.isRequired,
+  text: PropTypes.string,
   eventClicked: PropTypes.func.isRequired,
   bgColor: PropTypes.string.isRequired,
   color: PropTypes.string.isRequired,
