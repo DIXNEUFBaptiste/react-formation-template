@@ -27,7 +27,7 @@ function Button(props) {
         props.eventClicked("Hello");
       }}
       className={`${style.Button}${clicked?' '+style.clicked:''}`}
-      style={{...props.style, backgroundColor: props.bgcolor, color: props.color }}
+      style={{...props.style, backgroundColor: props.bgColor, color: props.color }}
       type={props.type}
       
     >
@@ -41,10 +41,10 @@ function Button(props) {
 Button.propTypes = {
   text: PropTypes.string.isRequired,
   eventClicked: PropTypes.func.isRequired,
-  bgcolor: PropTypes.string.isRequired,
+  bgColor: PropTypes.string.isRequired,
   color: PropTypes.string.isRequired,
   children: PropTypes.any.isRequired,
-  type: PropTypes.string.isRequired,
+  type: PropTypes.string,
   style:  PropTypes.object
 };
 
@@ -52,7 +52,7 @@ Button.defaultProps = {
   eventClicked: () => {
     console.error("Function undefined");
   },
-  bgcolor: "red",
+  bgColor: "red",
   color: "black",
   type: "button",
 };
