@@ -20,6 +20,27 @@
             "w":1200,
             "h":675,
             "name":"futurama.jpg"
+        },
+        {
+            "id":1,
+            "url":"futurama1.jpg",
+            "w":640,
+            "h":426,
+            "name":"futurama1.jpg"
+        },
+        {
+            "id":2,
+            "url":"futurama2.png",
+            "w":640,
+            "h":480,
+            "name":"futurama2.png"
+        },
+        {
+            "id":3,
+            "url":"futurama3.png",
+            "w":640,
+            "h":447,
+            "name":"futurama3.png"
         }
     ]
 }
