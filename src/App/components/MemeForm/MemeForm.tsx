@@ -9,11 +9,17 @@ interface I_MemeFormProps {
   currentMeme: I_Meme;
   images: Array<I_Image>;
   onInputValueChange: Function;
+  onSubmit: Function;
+  onReset: Function;
 }
 const MemeForm: FC<I_MemeFormProps> = (props) => {
   return (
     <div data-testid="MemeForm" className={styles.MemeForm}>
-      <form>
+      <form onSubmit={
+          (evt) => {
+            evt.preventDefault();
+            props.onSubmit();
+          }} >
         <h1>Titre</h1>
         <input
           type="text"
@@ -166,6 +172,12 @@ function mapDispatchToProps(dispatch:Function){
   return {
     onInputValueChange:(memeValuesToChange:object)=>{
       dispatch({type:CURRENT_ACTIONS.UPDATE_CURRENT,value:memeValuesToChange})
+    },
+    onSubmit:()=>{
+      dispatch({type:CURRENT_ACTIONS.SAVE_CURRENT})
+    },
+    onReset:()=>{
+      dispatch({type:CURRENT_ACTIONS.RESET_CURRENT})
     }
   }
 }

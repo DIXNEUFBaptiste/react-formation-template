@@ -1,46 +1,111 @@
 {
-    "memes":[
-        {
-            "id" : 0,
-            "text":"Demat breizh",
-            "x":50,
-            "y":100,
-            "fontweight":"900",
-            "fontSize":30,
-            "underline": true,
-            "italic":false,
-            "imageId":0,
-            "color":"#ACEBA0"
-        }
-    ],
-    "images" :[
-        {
-            "id":0,
-            "url":"futurama.jpg",
-            "w":1200,
-            "h":675,
-            "name":"futurama.jpg"
-        },
-        {
-            "id":1,
-            "url":"futurama1.jpg",
-            "w":640,
-            "h":426,
-            "name":"futurama1.jpg"
-        },
-        {
-            "id":2,
-            "url":"futurama2.png",
-            "w":640,
-            "h":480,
-            "name":"futurama2.png"
-        },
-        {
-            "id":3,
-            "url":"futurama3.png",
-            "w":640,
-            "h":447,
-            "name":"futurama3.png"
-        }
-    ]
+  "memes": [
+    {
+      "id": 0,
+      "text": "Demat breizh",
+      "x": 50,
+      "y": 100,
+      "fontweight": "900",
+      "fontSize": 30,
+      "underline": true,
+      "italic": false,
+      "imageId": 0,
+      "color": "#ACEBA0"
+    },
+    {
+      "titre": "",
+      "text": "",
+      "x": 0,
+      "y": 17,
+      "fontWeight": "900",
+      "fontSize": 30,
+      "underline": false,
+      "italic": false,
+      "imageId": 0,
+      "color": "#000000",
+      "id": 1
+    },
+    {
+      "titre": "",
+      "text": "",
+      "x": 0,
+      "y": 17,
+      "fontWeight": "900",
+      "fontSize": 30,
+      "underline": false,
+      "italic": false,
+      "imageId": 0,
+      "color": "#000000",
+      "id": 2
+    },
+    {
+      "titre": "",
+      "text": "",
+      "x": 0,
+      "y": 17,
+      "fontWeight": "900",
+      "fontSize": 30,
+      "underline": false,
+      "italic": false,
+      "imageId": 0,
+      "color": "#000000",
+      "id": 3
+    },
+    {
+      "titre": "",
+      "text": "sqdsq",
+      "x": 1,
+      "y": 17,
+      "fontWeight": "900",
+      "fontSize": 30,
+      "underline": false,
+      "italic": false,
+      "imageId": 2,
+      "color": "#000000",
+      "id": 4
+    },
+    {
+      "titre": "",
+      "text": "dfsfdsf",
+      "x": 4,
+      "y": 18,
+      "fontWeight": "900",
+      "fontSize": 31,
+      "underline": true,
+      "italic": true,
+      "imageId": 3,
+      "color": "#000000",
+      "id": 5
+    }
+  ],
+  "images": [
+    {
+      "id": 0,
+      "url": "futurama.jpg",
+      "w": 1200,
+      "h": 675,
+      "name": "futurama.jpg"
+    },
+    {
+      "id": 1,
+      "url": "futurama1.jpg",
+      "w": 640,
+      "h": 426,
+      "name": "futurama1.jpg"
+    },
+    {
+      "id": 2,
+      "url": "futurama2.png",
+      "w": 640,
+      "h": 480,
+      "name": "futurama2.png"
+    },
+    {
+      "id": 3,
+      "url": "futurama3.png",
+      "w": 640,
+      "h": 447,
+      "name": "futurama3.png"
+    }
+  ]
 }

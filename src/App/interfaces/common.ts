@@ -12,16 +12,16 @@ export interface I_Meme{
     color:string
 };
 export const DummyMeme:I_Meme={
-    titre:'meme1',
-    text:"Demat breizh",
-    x:50,
-    y:100,
+    titre:'',
+    text:'',
+    x:0,
+    y:17,
     fontWeight:'900',
     fontSize:30,
-    underline:true,
+    underline:false,
     italic:false,
     imageId:0,
-    color:'#ACEBA0'
+    color:'#000000'
 };
 export interface I_Image{
     id:number

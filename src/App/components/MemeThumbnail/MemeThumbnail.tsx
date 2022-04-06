@@ -11,7 +11,7 @@ interface I_MemeThumbnailProps {
 export const MemeThumbnail: React.FC<I_MemeThumbnailProps> = (props) => {
   return <div className={style.MemeThumbnail}>
     {props.memes.map((e,i)=>{
-      return <UCMemeViewer meme={e} image={props.images.find(i=>i.id===e.imageId)}/>
+      return <UCMemeViewer key={`Thumbnail-viewer-${i}`} meme={e} image={props.images.find(i=>i.id===e.imageId)}/>
     })}
   </div>;
 };
@@ -24,6 +24,8 @@ const mapStateToProps = (state: any, props: any) => {
   };
 };
 
-const mapDispatchToProps =()=>{};
+const mapDispatchToProps =()=>{
+  return {};
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(MemeThumbnail);
